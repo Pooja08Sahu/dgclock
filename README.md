@@ -1,2 +1,2 @@
 # dgclock
-this is digitalcloc
+this is digitalclock
