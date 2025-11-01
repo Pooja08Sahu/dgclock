@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.btn{
+    background-color:green;
+    color:white;
+    border: none;
+    
+    padding: 10px 20px;
+}
+
+    </style>
+    <script>
+
+        function bulb1(){
+            document.getElementById("demo").src="image/balb.jpg";
+        }
+
+        function bulb2(){
+            document.getElementById("demo").src="image/bulb.jpg";
+        }
+
+    </script>
+</head>
+<body>
+    <div>
+        <img src="image/bulb.jpg" id="demo" height="100px"; width="100px">
+        <br>
+        <br>
+        <button onclick="bulb1()"><h class="btn">On</h></button>
+        <button onclick="bulb2()"><h class="btn">Off</h></button>
+    </div>
+</body>
+</html>

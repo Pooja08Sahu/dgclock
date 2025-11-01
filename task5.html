@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+body{
+
+    background-color: #f9f6ef;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+
+textarea{
+    height: 200px;
+    width: 200px;
+    padding: 10px;
+    font-size: 16px;
+    resize: none;
+}
+
+button{
+margin: 10px 5px;
+padding: 10px;
+font-size: 14px;
+cursor: pointer;
+
+}
+    </style>
+
+    <script>
+function toUpperCase(){
+    const input= document.getElementById("textInput").value;
+    document.getElementById("output").innerText=input.toUpperCase();
+}
+function toLowerCase(){
+const input=document.getElementById("textInput").value;
+document.getElementById("output").innerText=input.toLowerCase();
+
+}
+
+function capitalize(){
+let input=document.getElementById("textInput").value.toLowerCase();
+let result =input.charAt(0).toLowerCase()+input.slice(1);
+document.getElementById("output").innerText=result;
+
+}
+
+    </script>
+</head>
+<body><div id="demo">
+    <h2 id="">Text Case Convert</h2>
+    <br>
+    <textarea id="textInput" type="text" placeholder="typing....."></textarea><br>
+    <button onclick="toUpperCase()">UPPERCASE</button>
+
+    <button onclick="toLowerCase()">lowercase</button>
+
+    <button onclick="capitalize()">Capitalize First Letter</button>
+    
+
+    <div id="output">Output will appear here</div>
+</div>
+</body>
+</html>

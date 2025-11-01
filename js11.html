@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <style>
+body{
+margin: 0;
+font-family: 'Senoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background: linear-gradient(to right,#141e30,#243b55);
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+color:#fff;
+}
+.clock-box{
+background: rgba( 255,255,255, 0.1);
+padding: 40px 60px;
+border-radius: 15px;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+text-align: center;
+}
+.clock{
+font-size: 28px;
+font-weight: bold;
+letter-spacing: 2px;
+color:#00ffcc;
+text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+}
+h2{
+margin-bottom: 20px;
+}
+</style>
+<script>
+function updateClock(){
+const now=new Date();
+let hours=now.getHours().toString().padStart(2, '0');
+let minutes=now.getMinutes().toString().padStart(2, '0');
+let seconds=now.getSeconds().toString().padStart(2, '0');
+document.getElementById('clock').textContent=`${hours}:${minutes}:${seconds}`;
+}
+setInterval(updateClock,1000);
+updateClock();
+</script>
+</head>
+<body>
+<div class="clock-box">
+   <h2>Digital Clock</h2>
+    <div class="clock" id="clock">00.00.00</div>
+   </div>
+</div>
+</body>
+</html>
