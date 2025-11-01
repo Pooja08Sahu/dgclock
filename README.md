@@ -1,0 +1,2 @@
+# dgclock
+this is digitalcloc
